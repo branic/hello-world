@@ -1,0 +1,79 @@
+---
+site_name: Brant's Baseline Demo
+# repo_url: https://gitlab.consulting.redhat.com/cloud-services/csa-docs
+# repo_name: gitlab/csa-docs
+# edit_uri: edit/main/docs/
+
+theme:
+  name: material
+  # custom_dir: overrides
+  language: en
+  # logo: images/site/logo.png
+  # favicon: images/assets/favicon.png
+  # icon:
+  #   repo: fontawesome/brands/gitlab
+  #   logo: fontawesome/regular/folder-open
+  # palette:
+  #   - scheme: redhat
+  #     media: "(prefers-color-scheme: light)"
+  #     primary: red
+  #     accent: pink
+  #     toggle:
+  #       icon: material/redhat
+  #       name: Switch to light mode
+  #   - scheme: slate
+  #     media: "(prefers-color-scheme: dark)"
+  #     toggle:
+  #       icon: material/weather-night
+  #       name: Switch to Red Hat mode
+  #   - scheme: default
+  #     primary: black
+  #     accent: red
+  #     toggle:
+  #       icon: material/weather-sunny
+  #       name: Switch to dark mode
+  # font:
+  #   text: Overpass
+  #   code: Overpass Mono
+  features:
+  #   - content.code.annotate
+  #   - navigation.instant
+    - navigation.sections  # prevents collapsible sections
+    - navigation.indexes  # section index pages
+
+# markdown_extensions:
+#   - admonition
+#   - pymdownx.details
+#   - pymdownx.superfences
+
+nav:
+  - Home:
+      - index.md
+  # - 1. Onboarding and Enablement:
+  #     - 01-onboarding/index.md
+  #     - Onboarding Plan: 01-onboarding/onboarding-plan.md
+  #     - Enablement Plan: 01-onboarding/enablement-plan.md
+  #     - Core Competencies: 01-onboarding/competencies.md
+  #     - Technical Enablement Plan: 01-onboarding/technical-enablement.md
+  #     - CSA Tool Belt: 01-onboarding/tools.md
+  # - 2. About the Role:
+  #     - About the Role: 02-csa-role/index.md
+  #     - CSA Engagements: 02-csa-role/engagements.md
+  #     - Tracking: 02-csa-role/tracking.md
+  #     - Other Literature: 02-csa-role/other.md
+  #     - Other Roles at Red Hat: 02-csa-role/redhat-roles.md
+  # - 3. Red Hat Products:
+  #     - 03-products/index.md
+  #     - Customer Content: 03-products/customer.md
+  #     - Customer Managed OpenShift: 03-products/customer-managed-ocp.md
+  #     - Internal Content: 03-products/internal.md
+  # - 4. Solutions:
+  #     - 04-solutions/index.md
+  # - 5. Giveback:
+  #     - 05-giveback/index.md
+  #     - CSA Webinars: 05-giveback/webinars.md
+  #     - Writing Literature: 05-giveback/writing.md
+  #     - Events: 05-giveback/events.md
+  #     - Red Hat Cares: 05-giveback/red-hat-cares.md
+  # - 6. Administrative:
+  #     - 06-administrative/index.md

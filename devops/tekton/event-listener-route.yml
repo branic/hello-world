@@ -1,0 +1,17 @@
+---
+apiVersion: route.openshift.io/v1
+kind: Route
+metadata:
+  name: eventlistener-route
+spec:
+  host: pipeline-hello-world.apps.brantdemo.oly7.p1.openshiftapps.com
+  to:
+    kind: Service
+    name: el-hello-world-app
+    weight: 100
+  port:
+    targetPort: http-listener
+  tls:
+    termination: edge
+  wildcardPolicy: None
+
