@@ -47,6 +47,8 @@ spec:
       params:
         - name: IMAGE
           value: $(params.IMAGE)
+        - name: DOCKERFILE
+          value: ./Containerfile
       workspaces:
         - name: source
           workspace: shared-workspace
