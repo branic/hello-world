@@ -60,6 +60,8 @@ spec:
       params:
         - name: namespace
           value: "$(params.namespace)"
+        - name: manifest_dir
+          value: "devops/k8s"
       workspaces:
         - name: source
           workspace: shared-workspace
