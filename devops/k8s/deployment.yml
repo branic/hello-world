@@ -2,7 +2,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: hello-world-site
+  name: hello-world
   labels:
     app: hello-world
 spec:
@@ -16,7 +16,7 @@ spec:
         app: hello-world
     spec:
       containers:
-        - name: hello-world-site
+        - name: hello-world
           image: quay.io/branic/hello_world:latest
           imagePullPolicy: Always
           ports:

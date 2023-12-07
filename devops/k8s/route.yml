@@ -6,6 +6,7 @@ metadata:
   labels:
     app: hello-world
 spec:
+  host: hello-world.apps.bevans-jeffdemo.jb9k.p1.openshiftapps.com
   port:
     targetPort: 8080
   to:
