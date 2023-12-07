@@ -20,9 +20,6 @@ spec:
     - name: IMAGE
       type: string
       description: image to be built from the code
-    - name: namespace
-      type: string
-      description: Namespace to deploy to
   tasks:
     - name: fetch-repository
       taskRef:
@@ -58,8 +55,6 @@ spec:
       taskRef:
         name: apply-manifests
       params:
-        - name: namespace
-          value: "$(params.namespace)"
         - name: manifest_dir
           value: "devops/k8s"
       workspaces:
@@ -75,7 +70,5 @@ spec:
           value: $(params.deployment-name)
         - name: IMAGE
           value: $(params.IMAGE)
-        - name: namespace
-          value: "$(params.namespace)"
       runAfter:
         - apply-manifests
