@@ -4,7 +4,7 @@ kind: Route
 metadata:
   name: eventlistener-route
 spec:
-  host: pipeline-hello-world.apps.jeffdemo.uoiz.p1.openshiftapps.com
+  host: pipeline-hello-world.apps.jeffdemo.yck8.p1.openshiftapps.com
   to:
     kind: Service
     name: el-hello-world-app

@@ -1,0 +1,71 @@
+---
+default: true
+
+# MD003/heading-style/header-style - Heading style
+# This will ensure that the heading format is consistent across all
+#   markdown files
+MD003:
+  style: "atx"
+
+# MD004/ul-style - Unordered list style
+# This will ensure that unordered lists use an asterisk
+MD004:
+  style: asterisk
+
+# MD007/ul-indent - Unordered list indentation
+# This will ensure that unordered sublists are indented 4 spaces. The
+#   4 space indent is required for unordered lists to work correctly
+#   with mkdocs
+MD007:
+  indent: 4
+  start_indented: false
+  start_indent: 2
+
+# MD013/line-length - Line length
+# This will ensure that lines are not too long, but will allow
+#   long lines for tables and code blocks
+MD013:
+  line_length: 100
+  heading_line_length: 100
+  # code_block_line_length: 100
+  code_blocks: false
+  tables: false
+  headings: true
+  headers: true
+  strict: false
+  stern: false
+
+# MD024/no-duplicate-heading/no-duplicate-header - Multiple headings with the same content
+# Only check siblings for duplication
+MD024:
+  siblings_only: true
+
+# MD033/no-inline-html - Inline HTML
+# These HTML elements are allowed to be used.
+MD033:
+  allowed_elements:
+    - "br"
+
+# MD046/code-block-style - Code block style
+# This will ensure that code block format is consistent across all
+#   markdown files
+MD046:
+  style: fenced
+
+# MD048/code-fence-style - Code fence style
+# This will ensure that code fence style format is consistent across all
+#   markdown files
+MD048:
+  style: backtick
+
+# MD049/emphasis-style - Emphasis style should be consistent
+# This will ensure that emphasis format is consistent across all
+#   markdown files
+MD049:
+  style: asterisk
+
+# MD050/strong-style - Strong style should be consistent
+# This will ensure that strong format is consistent across all
+#   markdown files
+MD050:
+  style: asterisk

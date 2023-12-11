@@ -1,7 +1,16 @@
-FROM registry.access.redhat.com/ubi9/nginx-120
+FROM ubi9/python-39 as builder
 
-COPY --chown=default ./website/ /opt/app-root/src/
-COPY --chown=default ./nginx.conf /etc/nginx/nginx.conf
+COPY . /tmp/src/
+
+RUN pip3 install --upgrade --no-cache-dir -r /tmp/src/requirements.txt
+
+RUN cd /tmp/src && \
+    mkdocs build --strict --site-dir /opt/app-root/src
+
+FROM ubi9/nginx-120
+
+COPY --from=builder --chown=default /opt/app-root/src/ /opt/app-root/src/
+COPY --from=builder --chown=default /tmp/src/nginx.conf /etc/nginx/nginx.conf
 
 EXPOSE 8080
 
